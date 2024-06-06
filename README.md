@@ -1,35 +1,35 @@
-# Key-Value Store Go
+# Key-Value Store in Go
 
-Ky projekt është një shembull i një sistemi të shpërndarë klient-server në gjuhën Go, që implementon një shërbim storage në formën e një key-value store (çelës-vlerë) duke përdorur Remote Procedure Call (RPC). Ky README do të ju udhëzojë në krijimin dhe ekzekutimin e projektin.
+This project is an example of a distributed client-server system in Go, implementing a storage service in the form of a key-value store using Remote Procedure Call (RPC). This README will guide you through creating and running the project.
 
 ## Server
 
-Kodi në server.go është pjesa e serverit. Ky kod krijon një server TCP në portin 1234 dhe ofron dy operacione për manipulimin e të dhënave në storage: Put dhe Get.
+The code in server.go is the server part. This code creates a TCP server on port 1234 and offers two operations for manipulating data in the storage: Put and Get.
 
 ## Client
 
-Kodi në client.go është pjesa e klientit. Ky kod është përgjegjës për dërgimin e kërkesave RPC për të manipuluar dhe marrë të dhëna nga serveri.
+The code in client.go is the client part. This code is responsible for sending RPC requests to manipulate and retrieve data from the server.
 
-### Hapat për të ekzekutuar projektin
+### Steps to run the project
 
-1. **Krijoni strukturën e skedarëve siç është treguar më lartë.**
+1. **Create the file structure as shown above.**
 
-2. **Vendosni kodin e dhënë në skedarët përkatës (server.go dhe client.go).**
+2. **Place the provided code into the respective files (server.go and client.go).**
 
-3. **Në terminal, navigoni te direktoria server dhe ekzekutoni komandën:**
+3. **In the terminal, navigate to the server directory and execute the command:**
 
     ```bash
     go run server.go
     ```
 
-4. **Në një terminal tjetër, navigoni te direktoria client dhe ekzekutoni komandat për të manipuluar të dhënat:**
+4. **In another terminal, navigate to the client directory and execute the commands to manipulate the data:**
 
     ```bash
     go run client.go put "1" "test"
     go run client.go get "1"
     ```
 
-## Struktura e projektit
+## Project Structure
 
 ```plaintext
 kvstore/
